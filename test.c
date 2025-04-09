@@ -1,15 +1,16 @@
 #include<stdio.h>
-#include<math.h>
-
 int main(){
-    int n;
-    scanf("%d", &n);
-    if( n % 2 == 0){
-        printf("N la so chan\n");
+    int a;
+    printf("Enter an integer: ");
+    scanf("%d", &a);
+    if(a > 0){
+        printf("%d la so lon hon khong \n",a);
+    }
+    else if(a < 0){
+        printf("%d la so nho hon khong \n",a);
     }
     else{
-        printf("N la so le\n");
+        printf("%d la so khong \n",a);
     }
-    return 0;
-    
+    printf("Hoan thanh\n");
 }
