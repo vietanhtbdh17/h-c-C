@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "name": "Run C in cmd (with pause)",
+          "type": "cppdbg",
+          "request": "launch",
+          "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+          "args": [],
+          "stopAtEntry": false,
+          "cwd": "${workspaceFolder}",
+          "environment": [],
+          "externalConsole": true,
+          "MIMode": "gdb",
+          "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
+          "preLaunchTask": "Build C with GCC",
+          "customLaunchSetupCommands": [
+              {
+                  "text": "-exec-run",
+                  "ignoreFailures": false
+              },
+              {
+                  "text": "-exec-interrupt",
+                  "ignoreFailures": true
+              }
+          ],
+          "launchCompleteCommand": "exec-run",
+          "debugServerArgs": "--wait"
+      }
+  ]
+}
