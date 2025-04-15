@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug C with GDB",
+      "name": "Debug C Program",
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -10,7 +10,7 @@
       "stopAtEntry": false,
       "cwd": "${fileDirname}",
       "environment": [],
-      "externalConsole": true,
+      "externalConsole": true,                 // 👉 cần có nếu muốn chạy debug trong cửa sổ CMD riêng
       "MIMode": "gdb",
       "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
       "setupCommands": [
@@ -20,7 +20,7 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "Build C with GCC"
+      "preLaunchTask": "Build C Program"      // 👉 task này phải trùng tên trong tasks.json
     }
   ]
 }
