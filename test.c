@@ -1,16 +1,12 @@
 #include<stdio.h>
+
 int main(){
-    int a;
-    printf("Enter an integer: ");
+    int a, count , sum = 1;
+    printf("Nhap so nguyen duong a:");
     scanf("%d", &a);
-    if(a > 0){
-        printf("%d la so lon hon khong \n",a);
+    for(count = a; count > 0; --count){
+        sum *= count;
     }
-    else if(a < 0){
-        printf("%d la so nho hon khong \n",a);
-    }
-    else{
-        printf("%d la so khong \n",a);
-    }
-    printf("Hoan thanh\n");
+    printf("Giai thua cua a la %d", sum);
+    return 0;
 }
